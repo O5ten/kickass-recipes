@@ -1,6 +1,6 @@
 pipeline {
    agent {
-       label 'foxtrot'
+       label 'master'
    }
    stages {
        stage('Clone'){
