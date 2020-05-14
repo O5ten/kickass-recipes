@@ -15,10 +15,11 @@ pipeline {
                     sh """  
                         git remote set-url origin git@github.com:O5ten/kickass-recipes.git
                         git config core.sshCommand 'ssh -i $key'
-                        git checkout origin develop
+                        git fetch origin master
+                        git checkout master
                         git add date.txt
                         git commit -m "Update date"
-                        git push origin develop
+                        git push origin master
                     """
                 }
            }
